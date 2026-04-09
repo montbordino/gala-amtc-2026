@@ -725,8 +725,8 @@ section {
 
 .timeline-dot {
     position: absolute;
-    left: -1.7rem;
-    top: 0.2rem;
+    left: -1.9rem;
+    top: 0.5rem;
     width: 10px;
     height: 10px;
     background: var(--gold);
@@ -737,7 +737,8 @@ section {
 .timeline-dot.big {
     width: 14px;
     height: 14px;
-    left: -1.9rem;
+    top: 0.4rem;
+    left: -2rem;
     background: var(--red-bright);
     box-shadow: 0 0 14px rgba(204, 41, 41, 0.6);
 }
