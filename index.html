@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Royale — Gala MIAGE AMTC</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
+    <script src="assets/scripts/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-border"></div>
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
+
+        <p class="bde-badge">BDE AMTC · MIAGE</p>
+        <div class="hero-suit-row">
+            <span class="suit-♠">♠</span>
+            <span class="suit-♥">♥</span>
+            <span class="suit-♦">♦</span>
+            <span class="suit-♣">♣</span>
+        </div>
+        <h1 class="hero-title">Casino<br>Royale</h1>
+        <p class="hero-subtitle">Gala Étudiant MIAGE</p>
+        <div class="hero-divider"></div>
+        <p class="hero-date">Bienvenue · La nuit commence</p>
+
+        <div class="hero-scroll">
+            <span>DÉCOUVRIR</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <button class="nav-btn" onclick="scrollTo('menu')">Menu</button>
+            <button class="nav-btn" onclick="scrollTo('activites')">Jeux</button>
+            <button class="nav-btn" onclick="scrollTo('regles')">Règles</button>
+            <button class="nav-btn" onclick="scrollTo('lots')">Lots</button>
+            <button class="nav-btn" onclick="scrollTo('djs')">DJs</button>
+            <button class="nav-btn" onclick="scrollTo('planning')">Planning</button>
+        </div>
+    </nav>
+
+    <!-- MENU -->
+    <div id="menu" style="background:var(--dark);">
+        <section class="reveal">
+            <div class="section-content">
+                <p class="section-eyebrow">Ce soir au</p>
+                <h2 class="section-title">Menu <em>du Soir</em></h2>
+                <div class="section-rule"></div>
+
+                <div class="menu-category">
+                    <h3 class="menu-cat-title">♠ Plats signatures du Neuf</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Tartes salées — 3 fromages, gésiers persillade, végétarienne…</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Croquetas saveur truffes</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Blinis au saumon, crème à l'aneth</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Navette fermière au chèvre et miel</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Salade thaï végétarienne</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Tartare de tomates aux amandes grillées</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Stick Mozzarella</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Frites fraîches, mayonnaise, sauce cocktail & aïoli maison</div>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3 class="menu-cat-title">♥ Nos Douceurs</h3>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">1 heure de Punch — forfait inclus</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">1 bouteille de vin rouge, rosé ou blanc pour 4 personnes</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Desserts gourmands assortis</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Macarons variés</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Muffins chocolat & caramel beurre salé</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Cannelés</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-dot"></div>
+                        <div class="menu-item-text">Mignardises</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ACTIVITES / JEUX -->
+    <div id="activites" style="background:var(--black);">
+        <section class="reveal">
+            <p class="section-eyebrow">8 activités</p>
+            <h2 class="section-title">Les <em>Jeux</em></h2>
+            <div class="section-rule"></div>
+            <p style="font-size:0.95rem; color:rgba(245,237,214,0.5); margin-bottom:1.5rem; font-style:italic;">Appuyez
+                sur un jeu pour voir ses règles</p>
+
+            <div class="games-grid">
+                <div class="game-card" onclick="openGame('pierre-feuille-ciseaux')">
+                    <span class="game-icon">✊</span>
+                    <div class="game-name">Pierre Feuille Ciseaux</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+                <div class="game-card" onclick="openGame('roulette')">
+                    <span class="game-icon">🎡</span>
+                    <div class="game-name">Roulette</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+                <div class="game-card" onclick="openGame('blackjack')">
+                    <span class="game-icon">🃏</span>
+                    <div class="game-name">Blackjack</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+                <div class="game-card" onclick="openGame('quizz')">
+                    <span class="game-icon">🧠</span>
+                    <div class="game-name">Quizz</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+                <div class="game-card" onclick="openGame('time-knockout')">
+                    <span class="game-icon">⏱️</span>
+                    <div class="game-name">Time Knockout</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+                <div class="game-card" onclick="openGame('anneaux')">
+                    <span class="game-icon">🏆</span>
+                    <div class="game-name">Anneaux</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+                <div class="game-card" onclick="openGame('yams')">
+                    <span class="game-icon">🎲</span>
+                    <div class="game-name">Yams</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+                <div class="game-card" onclick="openGame('bras-de-fer')">
+                    <span class="game-icon">💪</span>
+                    <div class="game-name">Bras de Fer</div>
+                    <div class="game-tap-hint">VOIR LES RÈGLES →</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- REGLES GENERALES -->
+    <div id="regles" style="background:var(--green-felt);">
+        <section class="reveal">
+            <div class="section-content">
+                <p class="section-eyebrow">Comment ça marche</p>
+                <h2 class="section-title" style="color:var(--gold-light);">Règles <em>du jeu</em></h2>
+                <div class="section-rule"></div>
+
+                <div class="rule-card">
+                    Tentez votre chance et repartez avec des prix exceptionnels lors de notre soirée <strong
+                        style="color:var(--gold-light);">Casino Royale</strong>. Grâce aux <strong
+                        style="color:var(--gold-light);">jetons remportés</strong> tout au long des activités, vous
+                    pourrez participer à une <strong style="color:var(--gold-light);">mise aux enchères
+                        exclusive</strong> et tenter de remporter des lots prestigieux. Plus vous jouez, plus vous
+                    augmentez vos chances de gagner et de rendre cette soirée inoubliable.
+                </div>
+
+                <div class="token-visual">
+                    <div class="token-chip">JETON</div>
+                    <div style="font-size:0.9rem; color:rgba(245,237,214,0.5); padding: 0 0.5rem;">+</div>
+                    <div class="token-chip red-chip">×5</div>
+                    <div style="font-size:0.9rem; color:rgba(245,237,214,0.5); padding: 0 0.5rem;">=</div>
+                    <div class="token-chip black-chip">ENCHÈRE</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- LOTS -->
+    <div id="lots" style="background:var(--dark);">
+        <section class="reveal">
+            <p class="section-eyebrow">À remporter</p>
+            <h2 class="section-title">Les <em>Lots</em></h2>
+            <div class="section-rule"></div>
+
+            <div class="prizes-list">
+                <div class="prize-card">
+                    <span class="prize-icon">🎸</span>
+                    <div class="prize-info">
+                        <div class="prize-name">1 Jour à Garorock</div>
+                        <div class="prize-detail">Festival de musique — place d'une valeur exceptionnelle</div>
+                    </div>
+                </div>
+                <div class="prize-card">
+                    <span class="prize-icon">🏎️</span>
+                    <div class="prize-info">
+                        <div class="prize-name">2 Places de Karting</div>
+                        <div class="prize-detail">Pour vivre l'adrénaline à fond</div>
+                    </div>
+                </div>
+                <div class="prize-card">
+                    <span class="prize-icon">🥃</span>
+                    <div class="prize-info">
+                        <div class="prize-name">1 Mètre de Shooters</div>
+                        <div class="prize-detail">Pour vous et vos amis</div>
+                    </div>
+                </div>
+                <div class="prize-card">
+                    <span class="prize-icon">🧠</span>
+                    <div class="prize-info">
+                        <div class="prize-name">100 € de bon — Jeu Quizz</div>
+                        <div class="prize-detail">Pour les cerveaux de la soirée</div>
+                    </div>
+                </div>
+                <div class="prize-card">
+                    <span class="prize-icon">🌴</span>
+                    <div class="prize-info">
+                        <div class="prize-name">2 Places — Soirée Brésilienne au Neuf</div>
+                        <div class="prize-detail">Une nuit tropicale vous attend</div>
+                    </div>
+                </div>
+                <div class="prize-card" style="border-left-color:var(--red-bright);">
+                    <span class="prize-icon">🎁</span>
+                    <div class="prize-info">
+                        <div class="prize-name">Et bien d'autres surprises…</div>
+                        <div class="prize-detail">À découvrir le soir même !</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prize-encheres-note">
+                🎰 Les lots sont mis aux enchères en fin de soirée.<br>
+                Accumulez un maximum de jetons pour maximiser vos chances !
+            </div>
+        </section>
+    </div>
+
+    <!-- DJs -->
+    <div id="djs" style="background:var(--black);">
+        <section class="reveal">
+            <p class="section-eyebrow">Musique live</p>
+            <h2 class="section-title">Nos <em>DJs</em></h2>
+            <div class="section-rule"></div>
+
+            <div class="dj-cards">
+                <div class="dj-card">
+                    <div class="dj-number">01</div>
+                    <div class="dj-vinyl">🎧</div>
+                    <div class="dj-label">DJ · Set 1</div>
+                    <div class="dj-name">À venir</div>
+                    <div class="dj-set">Ambiance Casino — début de soirée</div>
+                </div>
+                <div class="dj-card">
+                    <div class="dj-number">02</div>
+                    <div class="dj-vinyl">🎵</div>
+                    <div class="dj-label">DJ · Set 2</div>
+                    <div class="dj-name">À venir</div>
+                    <div class="dj-set">Montée en puissance — cœur de nuit</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PLANNING -->
+    <div id="planning" style="background:var(--dark);">
+        <section class="reveal">
+            <p class="section-eyebrow">Déroulé</p>
+            <h2 class="section-title">Le <em>Planning</em></h2>
+            <div class="section-rule"></div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot big"></div>
+                    <div class="timeline-time">19h00</div>
+                    <div class="timeline-event">Accueil & Cocktail</div>
+                    <div class="timeline-desc">Arrivée des invités — jetons offerts à l'entrée</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">19h30</div>
+                    <div class="timeline-event">Ouverture du Buffet</div>
+                    <div class="timeline-desc">Plats signatures du Neuf — service en continu</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">20h00</div>
+                    <div class="timeline-event">Lancement des Jeux</div>
+                    <div class="timeline-desc">Les 8 activités Casino ouvrent leurs tables</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">20h30</div>
+                    <div class="timeline-event">DJ Set 1</div>
+                    <div class="timeline-desc">L'ambiance Casino Royale s'installe</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">22h00</div>
+                    <div class="timeline-event">Desserts & Douceurs</div>
+                    <div class="timeline-desc">Macarons, muffins, cannelés & mignardises</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot big"></div>
+                    <div class="timeline-time">23h00</div>
+                    <div class="timeline-event">🎰 Mise aux Enchères</div>
+                    <div class="timeline-desc">Grand tirage des lots — sortez vos jetons !</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">23h30</div>
+                    <div class="timeline-event">DJ Set 2</div>
+                    <div class="timeline-desc">La nuit continue — dancefloor ouvert</div>
+                </div>
+                <div class="timeline-item" style="padding-bottom:0;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">02h00</div>
+                    <div class="timeline-event">Fin de Soirée</div>
+                    <div class="timeline-desc">Bonne nuit & à l'année prochaine ✨</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-suits">
+            <span style="color:var(--cream)">♠</span>
+            <span style="color:var(--red-bright)">♥</span>
+            <span style="color:var(--red-bright)">♦</span>
+            <span style="color:var(--cream)">♣</span>
+        </div>
+        <div class="footer-title">Casino Royale · Gala MIAGE</div>
+        <div class="footer-sub">BDE AMTC · Tous droits réservés</div>
+    </footer>
+
+    <!-- MODAL JEUX -->
+    <div class="modal-overlay" id="gameModal" onclick="closeModal(event)">
+        <div class="modal-sheet" style="position:relative;">
+            <button class="modal-close" onclick="closeModalBtn()">✕</button>
+            <div class="modal-handle"></div>
+            <div class="modal-game-icon" id="modalIcon">🎲</div>
+            <div class="modal-title" id="modalTitle">Jeu</div>
+            <div class="modal-rules" id="modalRules"></div>
+            <div class="modal-tokens-badge" id="modalTokens">🪙 Jetons à gagner</div>
+        </div>
+    </div>
+</body>
+
+</html>
