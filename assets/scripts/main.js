@@ -49,6 +49,19 @@ const games = {
     }
 };
 
+const timeline = [
+    { time: new Date("2026-05-29T19:00:00"), title: 'Accueil & Cocktail', description: 'Arrivée des invités — jetons offerts à l\'entrée' },
+    { time: new Date("2026-05-29T19:30:00"), title: 'Ouverture du Buffet', description: 'Plats signatures du Neuf — service en continu' },
+    { time: new Date("2026-05-29T20:00:00"), title: 'Lancement des Jeux', description: 'Les 8 activités Casino ouvrent leurs tables' },
+    { time: new Date("2026-05-29T20:30:00"), title: 'DJ Set 1', description: 'L\'ambiance Casino Royale s\'installe' },
+    { time: new Date("2026-05-29T22:00:00"), title: 'Desserts & Douceurs', description: 'Macarons, muffins, cannelés & mignardises' },
+    { time: new Date("2026-05-29T23:00:00"), title: 'Mise aux Enchères', description: 'Grand tirage des lots — sortez vos jetons !' },
+    { time: new Date("2026-05-29T23:30:00"), title: 'DJ Set 2', description: 'La nuit continue — dancefloor ouvert' },
+    { time: new Date("2026-05-29T02:00:00"), title: 'Fin de Soirée', description: 'Bonne nuit & à l\'année prochaine ✨' }
+];
+
+/* ---------------------------------- GAMES --------------------------------- */
+
 function openGame(id) {
     const g = games[id];
     if (!g) return;
@@ -69,7 +82,9 @@ function closeModalBtn() {
     document.body.style.overflow = '';
 }
 
-function scrollTo(id) {
+/* ---------------------------- HEADER NAVIGATION --------------------------- */
+
+function scrollToElement(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -83,7 +98,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Active nav
-const sections = ['menu', 'activites', 'regles', 'lots', 'djs', 'planning'];
+const sections = ['menu', 'regles', 'activites', 'lots', 'planning', 'djs'];
 const navBtns = document.querySelectorAll('.nav-btn');
 window.addEventListener('scroll', () => {
     let current = '';
@@ -95,3 +110,40 @@ window.addEventListener('scroll', () => {
         btn.classList.toggle('active', sections[i] === current);
     });
 });
+
+/* ----------------------------- TIMELINE CREATION ---------------------------- */
+
+const timelineContainer = document.getElementById('timeline');
+const currentTime = new Date();
+
+function isEventPassed(eventTimeDate) {
+    console.log(`Checking event time: ${eventTimeDate} against current time: ${currentTime}`);
+    return currentTime > eventTimeDate;
+}
+
+// Update game names and details dynamically based on language
+function getGameTitle(gameId) {
+    return i18n.t(`game_${gameId.replace(/-/g, '_')}`);
+}
+
+function addTimelineEvent(item) {
+    console.log(`Adding timeline event: ${item.title} at ${item.time}`);
+    const entry = document.createElement('div');
+
+    const isPassed = isEventPassed(item.time);
+    entry.className = `timeline-item ${isPassed ? 'passed' : ''}`;
+
+    const eventTime = item.time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    entry.innerHTML = `
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">${eventTime}</div>
+        <div class="timeline-event">${item.title}</div>
+        <div class="timeline-desc">${item.description}</div>
+    `;
+    timelineContainer.appendChild(entry);
+}
+
+
+timeline.forEach((item) => addTimelineEvent(item));
+console.log('Timeline events added:', timeline);

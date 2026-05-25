@@ -27,8 +27,8 @@
         <div class="hero-suit-row">
             <span class="suit-♠">♠</span>
             <span class="suit-♥">♥</span>
-            <span class="suit-♦">♦</span>
             <span class="suit-♣">♣</span>
+            <span class="suit-♦">♦</span>
         </div>
         <h1 class="hero-title">Casino<br>Royale</h1>
         <p class="hero-subtitle">Gala Étudiant MIAGE</p>
@@ -44,12 +44,12 @@
     <!-- NAV -->
     <nav>
         <div class="nav-inner">
-            <button class="nav-btn" onclick="scrollTo('menu')">Menu</button>
-            <button class="nav-btn" onclick="scrollTo('activites')">Jeux</button>
-            <button class="nav-btn" onclick="scrollTo('regles')">Règles</button>
-            <button class="nav-btn" onclick="scrollTo('lots')">Lots</button>
-            <button class="nav-btn" onclick="scrollTo('djs')">DJs</button>
-            <button class="nav-btn" onclick="scrollTo('planning')">Planning</button>
+            <button class="nav-btn" onclick="scrollToElement('menu')">Menu</button>
+            <button class="nav-btn" onclick="scrollToElement('activites')">Jeux</button>
+            <button class="nav-btn" onclick="scrollToElement('regles')">Règles</button>
+            <button class="nav-btn" onclick="scrollToElement('lots')">Lots</button>
+            <button class="nav-btn" onclick="scrollToElement('djs')">DJs</button>
+            <button class="nav-btn" onclick="scrollToElement('planning')">Planning</button>
         </div>
     </nav>
 
@@ -202,14 +202,6 @@
                         exclusive</strong> et tenter de remporter des lots prestigieux. Plus vous jouez, plus vous
                     augmentez vos chances de gagner et de rendre cette soirée inoubliable.
                 </div>
-
-                <div class="token-visual">
-                    <div class="token-chip">JETON</div>
-                    <div style="font-size:0.9rem; color:rgba(245,237,214,0.5); padding: 0 0.5rem;">+</div>
-                    <div class="token-chip red-chip">×5</div>
-                    <div style="font-size:0.9rem; color:rgba(245,237,214,0.5); padding: 0 0.5rem;">=</div>
-                    <div class="token-chip black-chip">ENCHÈRE</div>
-                </div>
             </div>
         </section>
     </div>
@@ -227,6 +219,13 @@
                     <div class="prize-info">
                         <div class="prize-name">1 Jour à Garorock</div>
                         <div class="prize-detail">Festival de musique — place d'une valeur exceptionnelle</div>
+                    </div>
+                </div>
+                <div class="prize-card">
+                    <span class="prize-icon">🚀</span>
+                    <div class="prize-info">
+                        <div class="prize-name">2 places Cité de l'espace</div>
+                        <div class="prize-detail">Découvrez l'univers de la science et de l'exploration</div>
                     </div>
                 </div>
                 <div class="prize-card">
@@ -306,55 +305,7 @@
             <h2 class="section-title">Le <em>Planning</em></h2>
             <div class="section-rule"></div>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot big"></div>
-                    <div class="timeline-time">19h00</div>
-                    <div class="timeline-event">Accueil & Cocktail</div>
-                    <div class="timeline-desc">Arrivée des invités — jetons offerts à l'entrée</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-time">19h30</div>
-                    <div class="timeline-event">Ouverture du Buffet</div>
-                    <div class="timeline-desc">Plats signatures du Neuf — service en continu</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-time">20h00</div>
-                    <div class="timeline-event">Lancement des Jeux</div>
-                    <div class="timeline-desc">Les 8 activités Casino ouvrent leurs tables</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-time">20h30</div>
-                    <div class="timeline-event">DJ Set 1</div>
-                    <div class="timeline-desc">L'ambiance Casino Royale s'installe</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-time">22h00</div>
-                    <div class="timeline-event">Desserts & Douceurs</div>
-                    <div class="timeline-desc">Macarons, muffins, cannelés & mignardises</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot big"></div>
-                    <div class="timeline-time">23h00</div>
-                    <div class="timeline-event">🎰 Mise aux Enchères</div>
-                    <div class="timeline-desc">Grand tirage des lots — sortez vos jetons !</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-time">23h30</div>
-                    <div class="timeline-event">DJ Set 2</div>
-                    <div class="timeline-desc">La nuit continue — dancefloor ouvert</div>
-                </div>
-                <div class="timeline-item" style="padding-bottom:0;">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-time">02h00</div>
-                    <div class="timeline-event">Fin de Soirée</div>
-                    <div class="timeline-desc">Bonne nuit & à l'année prochaine ✨</div>
-                </div>
+            <div id="timeline">
             </div>
         </section>
     </div>
@@ -364,8 +315,8 @@
         <div class="footer-suits">
             <span style="color:var(--cream)">♠</span>
             <span style="color:var(--red-bright)">♥</span>
-            <span style="color:var(--red-bright)">♦</span>
             <span style="color:var(--cream)">♣</span>
+            <span style="color:var(--red-bright)">♦</span>
         </div>
         <div class="footer-title">Casino Royale · Gala MIAGE</div>
         <div class="footer-sub">BDE AMTC · Tous droits réservés</div>

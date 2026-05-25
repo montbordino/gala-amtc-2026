@@ -170,7 +170,6 @@ body {
 .hero-scroll {
     position: absolute;
     bottom: 2.5rem;
-    left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -188,7 +187,7 @@ body {
 }
 
 .scroll-line {
-    width: 1px;
+    width: 3px;
     height: 30px;
     background: linear-gradient(var(--gold), transparent);
     animation: scrollPulse 2s infinite;
@@ -202,6 +201,7 @@ nav {
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    width: 100%;
 }
 
 .nav-inner {
@@ -209,6 +209,7 @@ nav {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    justify-content: space-evenly;
     gap: 0;
 }
 
@@ -237,6 +238,12 @@ nav {
 
 .nav-btn.active {
     border-bottom: 2px solid var(--gold);
+}
+
+@media (max-width: 30em) {
+    .nav-btn.optional {
+        display: none;
+    }
 }
 
 /* ─── SECTIONS ─── */
@@ -402,6 +409,18 @@ section {
     margin-top: 0.3rem;
 }
 
+.game-number {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(201, 168, 76, 0.20);
+    pointer-events: none;
+    font-style: italic;
+}
+
 /* ─── MODAL RULES ─── */
 .modal-overlay {
     display: none;
@@ -526,43 +545,6 @@ section {
     color: var(--cream);
 }
 
-.token-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.token-chip {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #F0D080, #C9A84C);
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 0.55rem;
-    letter-spacing: 0.1em;
-    color: var(--black);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.3);
-}
-
-.token-chip.red-chip {
-    background: radial-gradient(circle at 35% 35%, #e55, #8B1A1A);
-    color: var(--cream);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.token-chip.black-chip {
-    background: radial-gradient(circle at 35% 35%, #555, #111);
-    color: var(--gold-light);
-    border-color: rgba(201, 168, 76, 0.4);
-}
-
 /* ─── LOTS ─── */
 #lots {
     background: var(--dark);
@@ -596,8 +578,6 @@ section {
     flex-shrink: 0;
     filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.3));
 }
-
-.prize-info {}
 
 .prize-name {
     font-family: 'Playfair Display', serif;
@@ -703,12 +683,12 @@ section {
     background: var(--dark);
 }
 
-.timeline {
+#timeline {
     position: relative;
     padding-left: 2rem;
 }
 
-.timeline::before {
+#timeline::before {
     content: '';
     position: absolute;
     left: 0.4rem;
@@ -734,13 +714,14 @@ section {
     box-shadow: 0 0 10px rgba(201, 168, 76, 0.5);
 }
 
-.timeline-dot.big {
+.timeline-item.passed .timeline-dot {
     width: 14px;
     height: 14px;
     top: 0.4rem;
     left: -2rem;
     background: var(--red-bright);
-    box-shadow: 0 0 14px rgba(204, 41, 41, 0.6);
+    border: 1px solid var(--gold);
+    box-shadow: 0 0 12px rgba(204, 41, 41, 0.6);
 }
 
 .timeline-time {
@@ -792,6 +773,40 @@ footer {
     font-size: 0.6rem;
     letter-spacing: 0.35em;
     color: rgba(245, 237, 214, 0.3);
+}
+
+/* ─── LANGUAGE SELECTOR ─── */
+.language-selector {
+    margin-left: auto;
+}
+
+.language-dropdown {
+    background: transparent;
+    border: 1px solid rgba(201, 168, 76, 0.4);
+    color: var(--gold);
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-dropdown:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 8px rgba(201, 168, 76, 0.2);
+}
+
+.language-dropdown:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 12px rgba(201, 168, 76, 0.3);
+}
+
+.language-dropdown option {
+    background: var(--dark);
+    color: var(--cream);
 }
 
 /* ─── ANIMATIONS ─── */
