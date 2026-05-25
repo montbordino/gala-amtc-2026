@@ -15,7 +15,7 @@
 <body>
 
     <!-- HERO -->
-    <section id="hero">
+    <section id="hero" onclick="scrollToElement('menu')">
         <div class="hero-bg"></div>
         <div class="hero-border"></div>
         <div class="corner tl"></div>
@@ -47,9 +47,10 @@
             <button class="nav-btn" onclick="scrollToElement('menu')">Menu</button>
             <button class="nav-btn" onclick="scrollToElement('activites')">Jeux</button>
             <button class="nav-btn" onclick="scrollToElement('regles')">Règles</button>
-            <button class="nav-btn" onclick="scrollToElement('lots')">Lots</button>
-            <button class="nav-btn" onclick="scrollToElement('djs')">DJs</button>
+            <button class="nav-btn not-on-phone" onclick="scrollToElement('lots')">Lots</button>
+            <button class="nav-btn not-on-phone" onclick="scrollToElement('djs')">DJs</button>
             <button class="nav-btn" onclick="scrollToElement('planning')">Planning</button>
+            <button class="nav-btn not-on-phone" onclick="scrollToElement('after')">After</button>
         </div>
     </nav>
 
@@ -272,6 +273,18 @@
         </section>
     </div>
 
+    <!-- PLANNING -->
+    <div id="planning" style="background:var(--dark);">
+        <section class="reveal">
+            <p class="section-eyebrow">Déroulé</p>
+            <h2 class="section-title">Le <em>Planning</em></h2>
+            <div class="section-rule"></div>
+
+            <div id="timeline">
+            </div>
+        </section>
+    </div>
+
     <!-- DJs -->
     <div id="djs" style="background:var(--black);">
         <section class="reveal">
@@ -284,28 +297,46 @@
                     <div class="dj-number">01</div>
                     <div class="dj-vinyl">🎧</div>
                     <div class="dj-label">DJ · Set 1</div>
-                    <div class="dj-name">À venir</div>
-                    <div class="dj-set">Ambiance Casino — début de soirée</div>
+                    <div class="dj-name">@colas_naudi</div>
+                    <div class="dj-set">desc a venir</div>
                 </div>
                 <div class="dj-card">
                     <div class="dj-number">02</div>
                     <div class="dj-vinyl">🎵</div>
                     <div class="dj-label">DJ · Set 2</div>
-                    <div class="dj-name">À venir</div>
-                    <div class="dj-set">Montée en puissance — cœur de nuit</div>
+                    <div class="dj-name">@la_lousteee</div>
+                    <div class="dj-set">desc a venir</div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- PLANNING -->
-    <div id="planning" style="background:var(--dark);">
+    <!-- AFTER -->
+    <div id="after" style="background:var(--dark)">
         <section class="reveal">
-            <p class="section-eyebrow">Déroulé</p>
-            <h2 class="section-title">Le <em>Planning</em></h2>
-            <div class="section-rule"></div>
+            <div class="section-content">
+                <p class="section-eyebrow">Prolonger la nuit</p>
+                <h2 class="section-title">After <em>au Café Oz</em></h2>
+                <div class="section-rule"></div>
 
-            <div id="timeline">
+                <div class="after-card">
+                    <div class="after-chip-row">
+                        <span class="after-chip">2h - 6h</span>
+                        <span class="after-chip">Café Oz</span>
+                    </div>
+                    <p class="after-lead">La soirée continue pour les plus motivés avec une after party jusqu’à 6h du
+                        matin.</p>
+                    <div class="after-details">
+                        <div class="after-detail">
+                            <span class="after-detail-label">Lieu</span>
+                            <span class="after-detail-value">Café Oz</span>
+                        </div>
+                        <div class="after-detail">
+                            <span class="after-detail-label">Horaire</span>
+                            <span class="after-detail-value">De 2h à 6h</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

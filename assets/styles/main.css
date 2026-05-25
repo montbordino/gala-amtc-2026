@@ -683,6 +683,90 @@ section {
     background: var(--dark);
 }
 
+/* ─── AFTER ─── */
+#after {
+    position: relative;
+    overflow: hidden;
+}
+
+#after::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(201, 168, 76, 0.12), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(204, 41, 41, 0.1), transparent 24%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 40%);
+    pointer-events: none;
+}
+
+#after .section-content {
+    position: relative;
+    z-index: 1;
+}
+
+.after-card {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.95), rgba(17, 17, 17, 0.98));
+    border: 1px solid rgba(201, 168, 76, 0.18);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.after-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.after-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    background: rgba(201, 168, 76, 0.08);
+    color: var(--gold-light);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+}
+
+.after-lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--cream);
+    opacity: 0.9;
+    margin-bottom: 1.2rem;
+}
+
+.after-details {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.after-detail {
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+.after-detail-label {
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.32em;
+    color: rgba(201, 168, 76, 0.7);
+    margin-bottom: 0.25rem;
+}
+
+.after-detail-value {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--cream);
+}
+
 #timeline {
     position: relative;
     padding-left: 2rem;
@@ -841,6 +925,12 @@ footer {
 
     to {
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 728px) {
+    .not-on-phone {
+        display: none;
     }
 }
 

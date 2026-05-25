@@ -57,7 +57,7 @@ const timeline = [
     { time: new Date("2026-05-29T22:00:00"), title: 'Desserts & Douceurs', description: 'Macarons, muffins, cannelés & mignardises' },
     { time: new Date("2026-05-29T23:00:00"), title: 'Mise aux Enchères', description: 'Grand tirage des lots — sortez vos jetons !' },
     { time: new Date("2026-05-29T23:30:00"), title: 'DJ Set 2', description: 'La nuit continue — dancefloor ouvert' },
-    { time: new Date("2026-05-29T02:00:00"), title: 'Fin de Soirée', description: 'Bonne nuit & à l\'année prochaine ✨' }
+    { time: new Date("2026-05-29T02:00:00"), title: 'After au Café Oz', description: 'Rendez-vous de 2h à 6h pour prolonger la nuit' }
 ];
 
 /* ---------------------------------- GAMES --------------------------------- */
@@ -98,7 +98,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Active nav
-const sections = ['menu', 'regles', 'activites', 'lots', 'planning', 'djs'];
+const sections = ['menu', 'activites', 'regles', 'lots', 'djs', 'planning', 'after'];
 const navBtns = document.querySelectorAll('.nav-btn');
 window.addEventListener('scroll', () => {
     let current = '';
