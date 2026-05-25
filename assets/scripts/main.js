@@ -98,7 +98,7 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Active nav
-const sections = ['menu', 'activites', 'regles', 'lots', 'djs', 'planning', 'after'];
+const sections = ['menu', 'activites', 'regles', 'lots', 'planning', 'djs', 'after'];
 const navBtns = document.querySelectorAll('.nav-btn');
 window.addEventListener('scroll', () => {
     let current = '';
