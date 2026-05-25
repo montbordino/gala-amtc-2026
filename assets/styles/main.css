@@ -391,6 +391,7 @@ section {
     font-size: 2rem;
     margin-bottom: 0.6rem;
     display: block;
+    color: var(--gold-light);
 }
 
 .game-name {
@@ -462,6 +463,7 @@ section {
 .modal-game-icon {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: var(--gold);
 }
 
 .modal-title {
@@ -574,9 +576,9 @@ section {
 }
 
 .prize-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     flex-shrink: 0;
-    filter: drop-shadow(0 0 8px rgba(201, 168, 76, 0.3));
+    color: var(--cream);
 }
 
 .prize-name {
