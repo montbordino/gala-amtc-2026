@@ -2,13 +2,13 @@ const games = {
     'pierre-feuille-ciseaux': {
         icon: '<i class="ti ti-hand-grab" aria-hidden="true"></i>',
         title: 'Pierre Feuille Ciseaux',
-        rules: `• Chaque joueur choisit simultanément Pierre ✊, Feuille ✋ ou Ciseaux ✌️\n• Pierre bat Ciseaux — Ciseaux battent Feuille — Feuille bat Pierre\n• Format : partie en 1 manche\n• Le vainqueur repart avec ses jetons !`,
-        tokens: '<i class="ti ti-coin"></i> 2 jetons par victoire'
+        rules: `• Chaque joueur choisit simultanément Pierre ✊, Feuille ✋ ou Ciseaux ✌️\n• Pierre bat Ciseaux — Ciseaux battent Feuille — Feuille bat Pierre\n• Format : partie en 3 manches\n• Le vainqueur repart avec ses jetons !`,
+        tokens: '<i class="ti ti-coin"></i> Recupére la mise du perdant'
     },
     'roulette': {
         icon: '<i class="ti ti-circle-dotted" aria-hidden="true"></i>',
         title: 'Roulette',
-        rules: `• Misez vos jetons sur un numéro, une couleur ou une parité\n• La boule tourne… le destin décide\n• Mise sur une couleur (Rouge/Noir) : gain x2\n• Mise sur un numéro plein : gain x4`,
+        rules: `• Misez vos jetons sur un numéro, une couleur ou une parité\n• La boule tourne… le destin décide\n• Mise sur une couleur (Rouge/Noir) : gain x2\n• Mise sur un numéro plein : gain x8`,
         tokens: '<i class="ti ti-coin"></i> Gains selon mise'
     },
     'blackjack': {
@@ -38,14 +38,14 @@ const games = {
     'yams': {
         icon: '<i class="ti ti-dice-5" aria-hidden="true"></i>',
         title: 'Yams',
-        rules: `• 5 dés à lancer, jusqu'à 3 relances par tour\n• Constituez les meilleures combinaisons : Brelan, Carré, Full, Suite, Yams…\n• Yams (5 dés identiques) = gain maximum\n• Format : meilleur des 3 manches face à l'animateur\n• Stratégie et chance au rendez-vous !`,
-        tokens: '<i class="ti ti-coin"></i> 2 à 5 jetons selon combo'
+        rules: `• 5 dés à lancer, jusqu'à 3 relances par tour\n• Constituez les meilleures combinaisons : Brelan, Carré, Full, Suite, Yams…\n• Yams (5 dés identiques) = gain maximum\n• Format : partie en une manche Joueur contre Joueur\n• Stratégie et chance au rendez-vous !`,
+        tokens: '<i class="ti ti-coin"></i> Recupére la mise du perdant'
     },
     'bras-de-fer': {
         icon: '<i class="ti ti-barbell" aria-hidden="true"></i>',
         title: 'Bras de Fer',
-        rules: `• Défi classique de force : le coude sur la table, main dans la main\n• Victoire : forcer la main adverse à toucher la table\n• Format : meilleur des 3 manches\n• Catégories séparées si besoin\n• Le champion de la soirée recevra un titre spécial !`,
-        tokens: '<i class="ti ti-coin"></i> 3 jetons par victoire'
+        rules: `• Défi classique de force : le coude sur la table, main dans la main\n• Victoire : forcer la main adverse à toucher la table\n• Format : partie en une manche\n`,
+        tokens: '<i class="ti ti-coin"></i> Recupére la mise du perdant'
     }
 };
 
