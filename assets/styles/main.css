@@ -602,7 +602,8 @@ section {
 }
 
 .rule-suit-text strong {
-    font-weight: 700;
+    font-weight: 900;
+    color: var(--red-bright);
 }
 
 /* Couleurs des enseignes */
@@ -658,14 +659,14 @@ section {
 .prize-icon {
     font-size: 1.5rem;
     flex-shrink: 0;
-    color: var(--cream);
+    color: var(--gold-light);
 }
 
 .prize-name {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--gold-light);
+    color: var(--cream);
     line-height: 1.3;
 }
 

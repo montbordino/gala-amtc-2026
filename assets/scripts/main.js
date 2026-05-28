@@ -8,7 +8,7 @@ const games = {
     'roulette': {
         icon: '<i class="ti ti-circle-dotted" aria-hidden="true"></i>',
         title: 'Roulette',
-        rules: `• Misez vos jetons sur un numéro, une couleur ou une parité\n• La boule tourne… le destin décide\n• Mise sur une couleur (Rouge/Noir) : gain x2\n• Mise sur un numéro plein : gain x8`,
+        rules: `• Misez vos jetons sur un numéro, une couleur ou une parité\n• Mise sur une couleur (Rouge/Noir) : gain x2\n• Mise sur un numéro plein : gain x8`,
         tokens: '<i class="ti ti-coin"></i> Gains selon mise'
     },
     'blackjack': {
@@ -20,14 +20,14 @@ const games = {
     'quizz': {
         icon: '<i class="ti ti-brain" aria-hidden="true"></i>',
         title: 'Quizz',
-        rules: `• Questions sur la culture générale, MIAGE, pop culture…\n• Format individuel ou équipe de 2\n• 10 questions par partie — 30 secondes par question\n• Bonus : question jackpot pour doubler ses jetons\n• Le meilleur score de la soirée remporte 100 € de bon !`,
+        rules: `• Questions sur la culture générale, MIAGE, pop culture…\n• 1 point par bonne réponse\n• Le joueur avec le plus de points à la fin de la manche gagne !\n• Format : partie en une manche — questions variées`,
         tokens: '<i class="ti ti-coin"></i> 1 jeton par bonne réponse'
     },
     'time-knockout': {
         icon: '<i class="ti ti-stopwatch" aria-hidden="true"></i>',
         title: 'Time Knockout',
-        rules: `• Chaque joueur doit réaliser un défi en un temps imparti\n• Le chrono tourne, la pression monte !\n• Challenges variés : mémorisation, réflexes, coordination\n• Elimination progressive — le dernier debout gagne le jackpot\n• Minimum 4 joueurs par partie`,
-        tokens: '<i class="ti ti-coin"></i> 4 jetons au vainqueur'
+        rules: `• L'application affiche un temps cible, le chrono tourne et disparait\n• Le joueur le plus proche de la cible gagne !\n• Challenges variés : mémorisation, réflexes, coordination\n• Format : partie en une manche`,
+        tokens: '<i class="ti ti-coin"></i> Recupére la mise du perdant'
     },
     'anneaux': {
         icon: '<i class="ti ti-target" aria-hidden="true"></i>',
