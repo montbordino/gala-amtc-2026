@@ -536,15 +536,90 @@ section {
     z-index: 1;
 }
 
-.rule-card {
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid rgba(201, 168, 76, 0.25);
-    padding: 1.5rem;
-    border-radius: 4px;
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Style "Carte à jouer" */
+.rule-suit-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 3.5rem 1.5rem 3.5rem;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rule-suit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Coins des cartes (haut-gauche et bas-droite) */
+.rule-suit-corner {
+    position: absolute;
+    font-size: 2.4rem;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+}
+
+.rule-suit-tl {
+    top: 0.2rem;
+    left: 0.8rem;
+}
+
+.rule-suit-br {
+    bottom: 0.2rem;
+    right: 0.8rem;
+    transform: rotate(180deg);
+}
+
+/* Titre de la règle */
+.rule-suit-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Texte de la règle */
+.rule-suit-text {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.1rem;
-    line-height: 1.9;
-    font-style: italic;
-    color: var(--cream);
+    line-height: 1.5;
+    color: var(--dark3);
+}
+
+.rule-suit-text strong {
+    font-weight: 700;
+}
+
+/* Couleurs des enseignes */
+.rule-spade,
+.rule-club {
+    color: var(--black);
+}
+
+.rule-heart,
+.rule-diamond {
+    color: var(--red-bright);
+}
+
+/* On force le titre à prendre la couleur de l'enseigne */
+.rule-spade .rule-suit-label,
+.rule-club .rule-suit-label {
+    color: var(--black);
+}
+
+.rule-heart .rule-suit-label,
+.rule-diamond .rule-suit-label {
+    color: var(--red-bright);
 }
 
 /* ─── LOTS ─── */
@@ -667,6 +742,12 @@ section {
     font-weight: 700;
     color: var(--gold-light);
     margin-bottom: 0.4rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.dj-name:hover {
+    color: var(--gold);
 }
 
 .dj-genres {
