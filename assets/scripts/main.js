@@ -80,6 +80,27 @@ function closeModalBtn() {
     document.body.style.overflow = '';
 }
 
+/* ----------------------- MODAL HANDLE SWIPE DETECTION ---------------------- */
+
+let touchStartY = 0;
+const modalHandle = document.querySelector('.modal-handle');
+
+if (modalHandle) {
+    modalHandle.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+    }, false);
+
+    modalHandle.addEventListener('touchmove', (e) => {
+        const touchCurrentY = e.touches[0].clientY;
+        const diff = touchCurrentY - touchStartY;
+
+        // Si le swipe vers le bas dépasse 50px, fermer la modale
+        if (diff > 50) {
+            closeModalBtn();
+        }
+    }, false);
+}
+
 /* ---------------------------- HEADER NAVIGATION --------------------------- */
 
 function scrollToElement(id) {
