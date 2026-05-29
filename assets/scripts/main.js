@@ -32,8 +32,8 @@ const games = {
     'anneaux': {
         icon: '<i class="ti ti-target" aria-hidden="true"></i>',
         title: 'Anneaux',
-        rules: `• Lancez vos anneaux pour les accrocher aux plots\n• Distance imposée par l'animateur\n• 3 anneaux par joueur — chaque anneau accroché = points\n• Distances croissantes pour les bonus\n• Duel possible entre deux joueurs`,
-        tokens: '<i class="ti ti-coin"></i> 1 à 3 jetons selon la distance'
+        rules: `• Lancez vos anneaux pour les accrocher au crochet\n• Le premier qui accroche gagne !\n`,
+        tokens: '<i class="ti ti-coin"></i> Recupére la mise du perdant'
     },
     'yams': {
         icon: '<i class="ti ti-dice-5" aria-hidden="true"></i>',
